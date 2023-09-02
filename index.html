@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Desafio - Conversor de Monedas Nacional</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+</head>
+<body class="d-flex flex-column justify-content-center align-items-center vh-100 bg-dark">
+
+    <div class="text-white py-3 w-100">
+        <div class="container text-center">
+            <div class="border-top border-success border-bottom pb-3 d-inline-block">
+                <h1 class="display-4">Conversor de monedas Nacional</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-secondary p-4 text-center w-50 mt-5">
+        <h2 class="text-white mb-4">Pesos CLP</h2>
+        <div class="form-group">
+            <label for="montoCLP" class="text-white">Ingrese monto en CLP</label>
+            <input type="text" id="montoCLP" class="form-control" pattern="[1-9]\d*" title="Por favor use un numero positivo">
+        </div>
+        <div class="text-white mb-3">
+            Moneda a convertir
+        </div>
+        <select class="form-control mb-3" id="moneda">
+            <option>USD</option>
+            <option>EUR</option>
+        </select>
+        <button class="btn btn-info text-white" id="buscar">Buscar</button>
+        <p class="text-white mt-3" id="resultado">---</p>
+    </div>
+    <div>
+        <canvas id="grafico" width="400" height="300"></canvas>
+    </div>
+</body>
+<script src="assets/js/conversormoneda.js"></script> 
+</html>
